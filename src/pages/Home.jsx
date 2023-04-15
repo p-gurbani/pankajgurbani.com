@@ -99,16 +99,20 @@ const Home = () => {
             src={MeenacGarden.Home}
             className="marquee-img"
             alt="meenac garden shopify website homepage"
+            fetchpriority="high"
           />
           <img
             src={Projects.Babylux}
             className="marquee-img"
             alt="Babylux website homepage"
+            fetchpriority="high"
+            loading="lazy"
           />
           <img
             src={Projects.Lase}
             className="marquee-img"
             alt="LASE website homepage"
+            loading="lazy"
           />
         </Marquee>
       </section>

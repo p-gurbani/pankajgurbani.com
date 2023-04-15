@@ -19,7 +19,7 @@ function NavigationBar() {
   };
 
   return (
-    <nav>
+    <nav className="absolute left-0 top-0 right-0">
       <div className="max-w">
         <div className="flex items-center justify-between h-16">
           <div>
