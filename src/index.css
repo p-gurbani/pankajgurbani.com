@@ -20,7 +20,8 @@
   .navlink-footer {
     @apply navlink capitalize font-normal underline underline-offset-2 tracking-normal ml-0 px-0;
   }
-  .navlink.active, .navlink-mobile.active {
+  .navlink.active,
+  .navlink-mobile.active {
     @apply text-body dark:text-night-body font-semibold;
   }
   .max-w {
@@ -28,7 +29,7 @@
   }
 
   .btn-cta {
-    @apply text-center text-white py-5 px-10 bg-gradient-to-r from-cta-gradient-start to-cta-gradient-end dark:from-night-cta-gradient-start dark:to-night-cta-gradient-end rounded-lg font-medium text-xl;
+    @apply text-center text-white py-5 px-4 sm:px-10 bg-gradient-to-r from-cta-gradient-start to-cta-gradient-end dark:from-night-cta-gradient-start dark:to-night-cta-gradient-end rounded-lg font-medium text-xl;
   }
 
   h1,
@@ -136,7 +137,7 @@
   }
 
   .text-field {
-    @apply border dark:placeholder-gray-300 placeholder-gray-500 border-gray-800 dark:border-gray-200 bg-body-bg dark:bg-transparent rounded-lg px-6 focus:outline-none;
+    @apply border w-full dark:placeholder-gray-300 placeholder-gray-500 border-gray-800 dark:border-gray-200 bg-body-bg dark:bg-transparent rounded-lg px-6 focus:outline-none;
   }
 
   .social-icon-link:hover .social-icon {
@@ -187,7 +188,8 @@
     @apply h-[30px] dark:brightness-110;
   }
 
-  .project-img-box, .project-desc-box {
+  .project-img-box,
+  .project-desc-box {
     @apply flex-1;
   }
 
@@ -205,23 +207,6 @@
 
   .project-desc-box {
     @apply items-center;
-  }
-
-  div,
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  span,
-  svg,
-  input,
-  textarea,
-  section,
-  footer, 
-  a,
-  button {
-    @apply transition-colors duration-300;
   }
 
   img {
@@ -252,4 +237,66 @@ body {
 
 ul li p {
   margin-left: 8px;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #13907d;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.transition-height {
+  transition-property: height, max-height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }

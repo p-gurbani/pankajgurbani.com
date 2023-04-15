@@ -103,7 +103,7 @@ function NavigationBar() {
       </div>
 
       <div
-        className="md:hidden overflow-hidden transition-all duration-300"
+        className="md:hidden overflow-hidden transition-height shadow bg-card-bg dark:bg-night-card-bg"
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-b-2 border-gray-100 dark:border-gray-800">

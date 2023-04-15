@@ -17,7 +17,7 @@ const MediumBlogs = ({ username }) => {
   return (
     <div className="flex flex-col space-y-4 md:space-y-6">
       {blogs.map((blog) => (
-        <a key={blog.guid} href={blog.link} rel="noreferrer" target="_blank" className="flex items-center space-x-4 border rounded-lg p-6 bg-card-bg md:bg-transparent hover:bg-card-bg dark:hover:bg-night-card-bg cursor-pointer">
+        <a key={blog.guid} href={blog.link} rel="noreferrer" target="_blank" className="flex items-center space-x-4 border rounded-lg p-6 bg-card-bg dark:bg-night-card-bg md:bg-transparent md:dark:bg-transparent hover:bg-card-bg dark:hover:bg-night-card-bg cursor-pointer">
           <div className="flex-1 flex flex-col space-y-3">
             <h4 className="heading-5 md:heading-4">{blog.title}</h4>
             <p className="para-sm hidden md:block">

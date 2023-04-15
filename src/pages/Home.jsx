@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { NavLink } from "react-router-dom";
 import {
   MeenacGarden,
@@ -11,12 +12,13 @@ import { ReactComponent as ShopifyIcon } from "../assets/svg/shopify-icon.svg";
 import FeatureCard from "../components/FeatureCard";
 import StageCard from "../components/StageCard";
 import Marquee from "react-fast-marquee";
-import MediumBlogs from "../components/MediumBlogs";
-import SubscriberForm from "../components/SubscriberForm";
 import { PopupModal } from "react-calendly";
 import { useState } from "react";
-import ScrollToTopButton from "../components/ScrollToTopButton";
 import { Helmet } from "react-helmet";
+
+const MediumBlogs = lazy(() => import("../components/MediumBlogs"));
+const SubscriberForm = lazy(() => import("../components/SubscriberForm"));
+const ScrollToTopButton = lazy(() => import("../components/ScrollToTopButton"));
 
 const Home = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -36,7 +38,9 @@ const Home = () => {
           content="From designing your e-commerce website to marketing it. Explore how our team can help you grow your online business. In just 15-20 days."
         />
       </Helmet>
-      <ScrollToTopButton />
+      <Suspense fallback={<></>}>
+        <ScrollToTopButton />
+      </Suspense>
 
       {/* Headline, Subtitle, CTA */}
       <section className="max-w section space-y-12 text-center mt-16 md:mt-20">
@@ -88,12 +92,7 @@ const Home = () => {
 
       {/* Project images */}
       <section className="flex flex-col items-center mt-20">
-        <Marquee speed={40} gradient={false}>
-          {/* <img
-            src={Fonteva}
-            className="marquee-img"
-            alt="fonteva website homepage"
-          /> */}
+        <Marquee speed={60} gradient={false}>
           <img
             src={MeenacGarden.Home}
             className="marquee-img"
@@ -233,34 +232,36 @@ const Home = () => {
               the common tasks as a Shopify Admin.
             </p>
             <span className="py-2"></span>
-            <SubscriberForm
-              inputClass="md:w-52 lg:w-64 py-5 md:py-1"
-              btnLabel="Get Free PDF"
-              thankYouPara="You will receive an email with your PDF soon."
-            />
+            <Suspense fallback={<></>}>
+              <SubscriberForm
+                inputClass="md:w-52 lg:w-64 py-5 md:py-1"
+                btnLabel="Get Free PDF"
+                thankYouPara="You will receive an email with your PDF soon."
+              />
+            </Suspense>
           </div>
         </div>
       </section>
 
       {/* Let's turn your ecommerce idea into reality */}
       <section className="section max-w">
-        <div className="responsive-flex items-center space-y-12 md:space-y-0">
+        <div className="flex flex-col gap-12 items-center">
           {/* Image */}
           <img
             src={EcommerceIntoReality}
-            className="md:w-1/2 object-cover rounded-lg"
+            className="md:w-3/4 object-cover rounded-lg border"
             alt="Turn ecommerce into reality illustration"
           />
 
           {/* Description */}
           <div className="flex flex-1 flex-col items-center md:items-start space-y-8 px-4">
-            <p className="text-xl md:text-2xl max-w-sm">
+            <p className="text-xl md:text-2xl max-w-sm text-left md:text-center">
               Let’s turn your ecommerce idea into a{" "}
               <span className="underline-highlight">reality</span>.
             </p>
             <button
               onClick={handleBookConsultation}
-              className="btn-cta btn-grad w-full lg:w-4/5"
+              className="btn-cta btn-grad w-full"
             >
               Schedule a Free Consultation
             </button>
@@ -323,7 +324,9 @@ const Home = () => {
             to grow your ecommerce business.
           </p>
           {/* Articles */}
-          <MediumBlogs username="pankajgurbani" />
+          <Suspense fallback={<></>}>
+            <MediumBlogs username="pankajgurbani" />
+          </Suspense>
         </div>
       </section>
 
@@ -337,7 +340,9 @@ const Home = () => {
           <span className="underline-highlight">directly in your inbox</span>.
           No spam. Promise.
         </p>
-        <SubscriberForm inputClass="py-5 md:py-1 md:w-96" />
+        <Suspense fallback={<></>}>
+          <SubscriberForm formClass="px-4" inputClass="py-5 md:py-1 md:w-96" />
+        </Suspense>
       </section>
 
       {/* FAQ */}
