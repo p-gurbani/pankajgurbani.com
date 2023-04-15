@@ -11,14 +11,15 @@ import {
 import { ReactComponent as ShopifyIcon } from "../assets/svg/shopify-icon.svg";
 import FeatureCard from "../components/FeatureCard";
 import StageCard from "../components/StageCard";
-import Marquee from "react-fast-marquee";
-import { PopupModal } from "react-calendly";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
+import Marquee from "react-fast-marquee";
+// const Marquee = lazy(() => import("react-fast-marquee"));
+const PopupModal = lazy(() => import("../libs/Calendly.js"));
 const MediumBlogs = lazy(() => import("../components/MediumBlogs"));
 const SubscriberForm = lazy(() => import("../components/SubscriberForm"));
-const ScrollToTopButton = lazy(() => import("../components/ScrollToTopButton"));
 
 const Home = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -38,9 +39,8 @@ const Home = () => {
           content="From designing your e-commerce website to marketing it. Explore how our team can help you grow your online business. In just 15-20 days."
         />
       </Helmet>
-      <Suspense fallback={<></>}>
-        <ScrollToTopButton />
-      </Suspense>
+
+      <ScrollToTopButton />
 
       {/* Headline, Subtitle, CTA */}
       <section className="max-w section space-y-12 text-center mt-16 md:mt-20">
@@ -65,12 +65,14 @@ const Home = () => {
       </section>
 
       {/* Calendly */}
-      <PopupModal
-        url="https://calendly.com/pankajgurbani/ecommerce"
-        onModalClose={() => setIsCalendlyOpen(false)}
-        open={isCalendlyOpen}
-        rootElement={document.getElementById("root")}
-      />
+      <Suspense fallback={<></>}>
+        <PopupModal
+          url="https://calendly.com/pankajgurbani/ecommerce"
+          onModalClose={() => setIsCalendlyOpen(false)}
+          open={isCalendlyOpen}
+          rootElement={document.getElementById("root")}
+        />
+      </Suspense>
 
       {/* Partners */}
       <section className="section max-w">
@@ -218,6 +220,7 @@ const Home = () => {
             src={MasteringShopifyEbook}
             className="md:w-1/2 object-cover rounded-lg border border-black"
             alt="free shopify ebook"
+            loading="lazy"
           />
 
           {/* Description */}
@@ -251,6 +254,7 @@ const Home = () => {
             src={EcommerceIntoReality}
             className="md:w-3/4 object-cover rounded-lg border"
             alt="Turn ecommerce into reality illustration"
+            loading="lazy"
           />
 
           {/* Description */}
@@ -285,26 +289,31 @@ const Home = () => {
               src={Testimonials.EffieDark}
               className="rounded-lg hidden dark:block"
               alt="Testimonial of effie zhang (night mode) from fonteva"
+              loading="lazy"
             />
             <img
               src={Testimonials.Effie}
               className="rounded-lg dark:hidden"
               alt="Testimonial of effie zhang from fonteva"
+              loading="lazy"
             />
             <img
               src={Testimonials.UlasDark}
               className="rounded-lg hidden dark:block"
               alt="Testimonial of Ulas Kutuk from fonteva"
+              loading="lazy"
             />
             <img
               src={Testimonials.Ulas}
               className="rounded-lg dark:hidden"
               alt="Testimonial of Ulas Kutuk from fonteva"
+              loading="lazy"
             />
             <img
               src={Testimonials.George}
               className="rounded-lg"
               alt="Testimonial of George from LASE"
+              loading="lazy"
             />
           </div>
         </div>

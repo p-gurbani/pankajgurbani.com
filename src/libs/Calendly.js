@@ -1,0 +1,1 @@
+export { PopupModal as default } from "react-calendly";
