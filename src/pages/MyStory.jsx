@@ -53,7 +53,7 @@ const MyStory = () => {
           alt="Pankaj gurbani childhood"
         />
         <p className="story-para">
-          I was born and raised in the city of Ajmer, India. Growing up, I was
+          I was born and raised in the city of Ajmer (Rajasthan), India. Growing up, I was
           always curious about how things worked, and that curiosity led me to
           discover my passion for programming.
         </p>
