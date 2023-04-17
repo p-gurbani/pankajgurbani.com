@@ -12,7 +12,7 @@ const CaseStudies = () => {
           content="Explore our case studies and see how we've helped our clients achieve success. Discover how we can help take your business to the next level. Contact us today to get started."
         />
       </Helmet>
-      <section className="section gap-12 mt-16 md:mt-20">
+      <section aria-label="Case Studies" className="section gap-12 mt-16 md:mt-20">
         {/* Heading */}
         <h1 className="heading-1 text-center max-w-xl">
           Some of my{" "}

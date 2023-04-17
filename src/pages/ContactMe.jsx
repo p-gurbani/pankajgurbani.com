@@ -51,7 +51,7 @@ const ContactMe = () => {
           content="Available for questions, projects, collaborations, and coffee. ☕️"
         />
       </Helmet>
-      <section className="section gap-2 mt-16 md:mt-20">
+      <section aria-label="Contact Form" className="section gap-2 mt-16 md:mt-20">
         <h1 className="heading-1 text-center max-w-xl !text-transparent bg-clip-text bg-gradient-to-r dark:bg-gradient-to-r from-cta-gradient-start to-night-cta-gradient-end dark:from-night-cta-gradient-start dark:to-night-cta-gradient-end">
           Get in touch.
         </h1>

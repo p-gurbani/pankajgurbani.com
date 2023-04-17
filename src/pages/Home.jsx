@@ -29,21 +29,21 @@ const Home = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="page-container pb-0">
       <Helmet>
         <title>
-          Pankaj Gurbani | Turning Ideas into Amazing Shopify Stores
+          Pankaj Gurbani - Turning Ideas into Amazing Shopify Stores
         </title>
         <meta
           name="description"
-          content="From designing your e-commerce website to marketing it. Explore how our team can help you grow your online business. In just 15-20 days."
+          content="Our team of Shopify Experts can help you start and grow your online business. Our services include Shopify Store Development, Social Media Marketing, SEO, Email Marketing, and Paid Ads."
         />
       </Helmet>
 
       <ScrollToTopButton />
 
       {/* Headline, Subtitle, CTA */}
-      <section className="max-w section space-y-12 text-center mt-16 md:mt-20">
+      <section aria-label="Hero Section" className="max-w section space-y-12 text-center mt-16 md:mt-20">
         <h1 className="heading-1 max-w-3xl 2xl:max-w-4xl">
           I turn your ideas <br />
           into amazing{" "}
@@ -123,8 +123,8 @@ const Home = () => {
           Explore, how we can help your business grow.
         </h2>
         <p className="sub-para max-w-md md:max-w-3xl">
-          From designing your website, to marketing it. <br />
-          My team can handle everything for you,{" "}
+          Our team of Shopify Experts can help you start and grow your online
+          business,{" "}
           <span className="underline-highlight">
             so you can focus on what you do best
           </span>
@@ -136,7 +136,7 @@ const Home = () => {
             className="bg-card-bg-1 dark:bg-night-card-bg-1"
             title="Begin your journey."
             features={[
-              "Setup your online store",
+              "Setup your Shopify store",
               "Choose and customize your theme",
               "Add products",
               "Create collections",
@@ -171,13 +171,13 @@ const Home = () => {
             ]}
           />
         </div>
-        <NavLink to="/contact" className="btn-cta btn-grad w-full md:w-max">
+        <NavLink to="/contact" className="btn-cta btn-grad w-full md:w-1/3">
           <span>Let's chat</span>
         </NavLink>
       </section>
 
       {/* But that's not all, more services */}
-      <section className="section max-w">
+      <section aria-label="Additional Services" className="section max-w">
         <div className="max-w-3xl section">
           <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
             But, that’s not all.
@@ -216,69 +216,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Freebie */}
-      <section className="section bg-ebook-section-bg dark:bg-night-ebook-section-bg">
-        <div className="max-w flex flex-col md:flex-row md:items-center space-y-12 md:space-x-8 md:space-y-0 py-16 md:py-20">
-          {/* Image */}
-          <img
-            src={MasteringShopifyEbook}
-            className="md:w-1/2 object-cover rounded-lg border border-black"
-            alt="free shopify ebook"
-            loading="lazy"
-          />
-
-          {/* Description */}
-          <div className="flex flex-1 flex-col space-y-4 px-4">
-            <h2 className="heading-2 font-medium">
-              An A-Z Guide to managing your Shopify store.
-            </h2>
-            <p className="para">Finding it difficult to use Shopify?</p>
-            <p className="para">
-              This <span className="underline-highlight">free e-book</span>{" "}
-              contains step-by-step instructions with screenshots to perform all
-              the common tasks as a Shopify Admin.
-            </p>
-            <span className="py-2"></span>
-            <Suspense fallback={<></>}>
-              <SubscriberForm
-                inputClass="md:w-52 lg:w-64 py-5 md:py-1"
-                btnLabel="Get Free PDF"
-                thankYouPara="You will receive an email with your PDF soon."
-              />
-            </Suspense>
-          </div>
-        </div>
-      </section>
-
-      {/* Let's turn your ecommerce idea into reality */}
-      <section className="section max-w">
-        <div className="flex flex-col gap-12 items-center">
-          {/* Image */}
-          <img
-            src={EcommerceIntoReality}
-            className="md:w-3/4 object-cover rounded-lg border"
-            alt="Turn ecommerce into reality illustration"
-            loading="lazy"
-          />
-
-          {/* Description */}
-          <div className="flex flex-1 flex-col items-center md:items-start space-y-8 px-4">
-            <p className="text-xl md:text-2xl max-w-sm text-left md:text-center">
-              Let’s turn your ecommerce idea into a{" "}
-              <span className="underline-highlight">reality</span>.
-            </p>
-            <button
-              onClick={handleBookConsultation}
-              className="btn-cta btn-grad w-full"
-            >
-              Schedule a Free Consultation
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
-      <section className="section bg-testimonial-section-bg dark:bg-night-testimonial-section-bg">
+      <section aria-label="Testimonials" className="section bg-testimonial-section-bg dark:bg-night-testimonial-section-bg">
         <div className="max-w flex flex-col items-center space-y-12 py-16 md:py-18">
           <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center text-night-heading">
             Hear from my happy clients :)
@@ -323,11 +262,38 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Let's turn your ecommerce idea into reality */}
+      <section className="section max-w pb-20">
+        <div className="flex flex-col gap-12 items-center">
+          {/* Image */}
+          <img
+            src={EcommerceIntoReality}
+            className="md:w-1/2 object-cover rounded-lg border"
+            alt="Turn ecommerce into reality illustration"
+            loading="lazy"
+          />
+
+          {/* Description */}
+          <div className="flex flex-1 flex-col items-center md:items-start space-y-8 px-4">
+            <p className="text-xl md:text-2xl max-w-sm text-left md:text-center">
+              Let’s turn your ecommerce idea into a{" "}
+              <span className="underline-highlight">reality</span>.
+            </p>
+            <button
+              onClick={handleBookConsultation}
+              className="btn-cta btn-grad w-full"
+            >
+              Schedule a Free Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Blogs (Continue exploring) */}
-      <section className="section max-w">
+      <section aria-label="Ecommerce blogs by Pankaj Gurbani" className="section max-w">
         <div className="max-w-3xl section">
           <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
-            Keep learning. Keep growing.
+            Learn more about growing your eCommerce business.
           </h2>
           <p className="sub-para max-w-md md:max-w-3xl">
             Check out my blogs for{" "}
@@ -344,7 +310,7 @@ const Home = () => {
       </section>
 
       {/* Subscribe to my newsletter */}
-      <section className="section w-full max-w">
+      <section aria-label="Subscribe to my newsletter" className="section w-full max-w">
         <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
           Subscribe to my newsletter.
         </h2>
@@ -359,7 +325,7 @@ const Home = () => {
       </section>
 
       {/* FAQ */}
-      <section className="section max-w">
+      <section aria-label="Frequently Asked Questions (FAQ)" className="section max-w">
         <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
           FAQs
         </h2>
@@ -386,6 +352,40 @@ const Home = () => {
               <span className="underline-highlight">15 - 20 days</span>. As the
               complexity increases, so does the time.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Freebie */}
+      <section aria-label="Free Ebook to learn shopify administration" className="section bg-ebook-section-bg dark:bg-night-ebook-section-bg">
+        <div className="max-w flex flex-col md:flex-row md:items-center space-y-12 md:space-x-8 md:space-y-0 py-16 md:py-20">
+          {/* Image */}
+          <img
+            src={MasteringShopifyEbook}
+            className="md:w-1/2 object-cover rounded-lg border border-black"
+            alt="free shopify ebook"
+            loading="lazy"
+          />
+
+          {/* Description */}
+          <div className="flex flex-1 flex-col space-y-4 px-4">
+            <h2 className="heading-2 font-medium">
+              An A-Z Guide to managing your Shopify store.
+            </h2>
+            <p className="para">Finding it difficult to use Shopify?</p>
+            <p className="para">
+              This <span className="underline-highlight">free e-book</span>{" "}
+              contains step-by-step instructions with screenshots to perform all
+              the common tasks as a Shopify Admin.
+            </p>
+            <span className="py-2"></span>
+            <Suspense fallback={<></>}>
+              <SubscriberForm
+                inputClass="md:w-52 lg:w-64 py-5 md:py-1"
+                btnLabel="Get Free PDF"
+                thankYouPara="You will receive an email with your PDF soon."
+              />
+            </Suspense>
           </div>
         </div>
       </section>

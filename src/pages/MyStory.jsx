@@ -12,7 +12,7 @@ const MyStory = () => {
         />
       </Helmet>
       {/* In a nutshell */}
-      <section className="section max-w mt-16 md:mt-20">
+      <section aria-label="About me" className="section max-w mt-16 md:mt-20">
         <h1 className="heading-1 max-w-3xl 2xl:max-w-4xl">In a nutshell.</h1>
         <div className="flex flex-col max-w-3xl md:flex-row md:items-center md:space-x-16 space-y-10 md:space-y-0">
           {/* Profile Image */}
@@ -41,7 +41,7 @@ const MyStory = () => {
       </section>
 
       {/* The whole story */}
-      <section className="section max-w">
+      <section aria-label="The whole story" className="section max-w">
         <h1 className="heading-1 max-w-3xl 2xl:max-w-4xl">The whole story.</h1>
         <p className="sub-para">
           Let me take you on a journey through my life.

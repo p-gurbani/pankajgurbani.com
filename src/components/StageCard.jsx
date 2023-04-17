@@ -1,7 +1,7 @@
 const StageCard = ({ subtitle, title, features, children, className }) => {
   return (
     <div className={`card py-12 ${className}`}>
-      <p className="text-sm tracking-widest uppercase">{subtitle}</p>
+      <span className="text-sm tracking-widest uppercase">{subtitle}</span>
       {/* Title */}
       <h3 className="heading-3">{title}</h3>
       <ul className="list-disc list-inside flex flex-col space-y-4 pt-4">
@@ -25,7 +25,7 @@ const StageCard = ({ subtitle, title, features, children, className }) => {
                 />
               </svg>
             </div>
-            <p>{feature}</p>
+            <span>{feature}</span>
           </li>
         ))}
       </ul>
