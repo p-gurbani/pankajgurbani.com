@@ -32,11 +32,11 @@ const Home = () => {
     <div className="page-container py-0">
       <Helmet>
         <title>
-          Pankaj Gurbani - Turning Ideas into Amazing Shopify Stores
+          Pankaj Gurbani - Shopify Store Design, Development, and Marketing.
         </title>
         <meta
           name="description"
-          content="Our team of Shopify Experts can help you start and grow your online business. Our services include Shopify Store Development, Social Media Marketing, SEO, Email Marketing, and Paid Ads."
+          content="Looking for highly skilled Shopify Experts in India? We can help you with Shopify Store Design, Development, Social Media Marketing, SEO, Email Marketing, and Paid Ads."
         />
       </Helmet>
 
@@ -47,11 +47,10 @@ const Home = () => {
         aria-label="Hero Section"
         className="max-w section space-y-12 text-center justify-center min-h-[60vh]"
       >
-        <h1 className="heading-1 max-w-3xl 2xl:max-w-4xl">
-          Let's build and grow <br />
-          your{" "}
+        <h1 className="heading-1 max-w-2xl">
+          We design, develop, and grow your{" "}
           <span className="text-heading-highlight dark:text-night-heading-highlight">
-            Shopify
+            shopify
           </span>{" "}
           store.
         </h1>

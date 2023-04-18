@@ -171,8 +171,8 @@ const MeenacGarden = () => {
         </p>
       </section>
 
-      <section className="section max-w">
-        <div className="flex flex-col md:flex-row gap-4">
+      <section className="section px-4">
+        <div className="flex flex-col w-full md:w-max md:flex-row gap-4">
           <NavLink to="/contact" className="btn-cta btn-grad w-full md:w-max">
             <span>Let's build your project.</span>
           </NavLink>
