@@ -1,15 +1,31 @@
 import { AboutMe } from "../assets/images/cdn";
 import { Helmet } from "react-helmet";
+import { ReactComponent as InstagramIcon } from "../assets/svg/instagram.svg";
+import { ReactComponent as TwitterIcon } from "../assets/svg/twitter.svg";
+import { ReactComponent as LinkedInIcon } from "../assets/svg/linkedin.svg";
+import { NavLink } from "react-router-dom";
+
+const CallToActions = () => {
+  return (
+    <section className="section px-4">
+      <div className="flex flex-col w-full md:w-max items-stretch md:flex-row gap-4">
+        <NavLink to="/contact" className="btn-cta btn-grad w-full md:w-max">
+          <span>Let's build your project.</span>
+        </NavLink>
+        <NavLink to="/case-studies" className="btn-secondary w-full md:w-max">
+          <span>Explore my work.</span>
+        </NavLink>
+      </div>
+    </section>
+  );
+};
 
 const MyStory = () => {
   return (
     <div className="page-container">
       <Helmet>
         <title>My Story - Pankaj Gurbani</title>
-        <meta
-          name="description"
-          content="Learn more about me and my life."
-        />
+        <meta name="description" content="Learn more about me and my life." />
       </Helmet>
       {/* In a nutshell */}
       <section aria-label="About me" className="section max-w mt-16 md:mt-20">
@@ -18,27 +34,55 @@ const MyStory = () => {
           {/* Profile Image */}
           <img
             src={AboutMe.ProfileImage}
-            className="md:w-1/2 object-cover object-top sm:object-center rounded-lg h-[400px]"
+            className="md:w-4/5 object-cover object-top rounded h-[400px]"
             alt="Pankaj Gurbani profile"
           />
 
           {/* About me in a nutshell */}
           <div className="flex flex-col space-y-6">
             <p className="story-para">
-              I’m a Shopify Expert who helps visionary entrepreneurs build
+              Pankaj is a Shopify Expert who helps visionary entrepreneurs build
               creative and goal-driven eCommerce websites.{" "}
             </p>
             <p className="story-para">
-              I began my career as a web developer and designer, but eventually
-              found my passion for eCommerce.
+              He began his career as a web developer and designer, but
+              eventually found his passion for eCommerce.
             </p>
             <p className="story-para">
-              I work remotely with my team and alongside my pooch Candy, who
-              keeps wagging her tail while staring at me :)
+              He works remotely with his team alongside his pooch Candy, who
+              keeps wagging her tail while staring at him :)
             </p>
+            <div className="flex items-center px-4 space-x-6 md:space-x-4">
+              <a
+                href="https://www.instagram.com/pankajgurbanii/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 social-icon-link"
+              >
+                <InstagramIcon className="social-icon" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/gurbanipankaj/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 social-icon-link"
+              >
+                <LinkedInIcon className="social-icon" />
+              </a>
+              <a
+                href="https://twitter.com/pankajgurbani_"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 social-icon-link"
+              >
+                <TwitterIcon className="social-icon" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
+      <CallToActions />
 
       {/* The whole story */}
       <section aria-label="The whole story" className="section max-w">
@@ -49,13 +93,13 @@ const MyStory = () => {
         <h3 className="heading-3 max-w-3xl 2xl:max-w-4xl">School days.</h3>
         <img
           src={AboutMe.ChildhoodImage}
-          className="object-cover object-top sm:object-center rounded-lg h-[400px] saturate-0"
+          className="object-cover object-top sm:object-center rounded h-[400px] saturate-0"
           alt="Pankaj gurbani childhood"
         />
         <p className="story-para">
-          I was born and raised in the city of Ajmer (Rajasthan), India. Growing up, I was
-          always curious about how things worked, and that curiosity led me to
-          discover my passion for programming.
+          I was born and raised in the city of Ajmer (Rajasthan), India. Growing
+          up, I was always curious about how things worked, and that curiosity
+          led me to discover my passion for programming.
         </p>
         <p className="story-para">
           When I was 11 years old, I first got my hands on a computer, and I was
@@ -77,12 +121,12 @@ const MyStory = () => {
         <div className="responsive-flex md:max-w-2xl lg:max-w-5xl">
           <img
             src={AboutMe.OfficeSpace}
-            className="object-cover object-center rounded-lg md:w-1/2 h-[400px] saturate-50"
+            className="object-cover object-center rounded md:w-1/2 h-[400px] saturate-50"
             alt="Concretio office space"
           />
           <img
             src={AboutMe.Colleagues}
-            className="object-cover object-left rounded-lg md:w-1/2 h-[400px] saturate-50"
+            className="object-cover object-left rounded md:w-1/2 h-[400px] saturate-50"
             alt="Pankaj Gurbani's colleagues at Concretio Apps"
           />
         </div>
@@ -126,12 +170,12 @@ const MyStory = () => {
         <div className="responsive-flex md:max-w-2xl lg:max-w-5xl">
           <img
             src={AboutMe.MySetup}
-            className="object-cover object-center rounded-lg md:w-1/2 h-[400px]"
+            className="object-cover object-center rounded md:w-1/2 h-[400px]"
             alt="Pankaj Gurbani's home office setup when he started freelancing"
           />
           <img
             src={AboutMe.MyCurrentSetup}
-            className="object-cover object-center rounded-lg md:w-1/2 h-[400px]"
+            className="object-cover object-center rounded md:w-1/2 h-[400px]"
             alt="Pankaj Gurbani's current home office setup"
           />
         </div>
@@ -150,6 +194,7 @@ const MyStory = () => {
           , no matter how difficult they may seem.
         </p>
       </section>
+      <CallToActions />
     </div>
   );
 };
