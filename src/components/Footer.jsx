@@ -29,25 +29,25 @@ const Footer = () => {
             href="https://www.instagram.com/pankajgurbanii/"
             target="_blank"
             rel="noreferrer"
-            className="w-6 social-icon-link"
+            className="w-7 social-icon-link"
           >
             <InstagramIcon className="social-icon" />
-          </a>
-          <a
-            href="https://twitter.com/pankajgurbani_"
-            target="_blank"
-            rel="noreferrer"
-            className="w-6 social-icon-link"
-          >
-            <TwitterIcon className="social-icon" />
           </a>
           <a
             href="https://www.linkedin.com/in/gurbanipankaj/"
             target="_blank"
             rel="noreferrer"
-            className="w-6 social-icon-link"
+            className="w-7 social-icon-link"
           >
             <LinkedInIcon className="social-icon" />
+          </a>
+          <a
+            href="https://twitter.com/pankajgurbani_"
+            target="_blank"
+            rel="noreferrer"
+            className="w-7 social-icon-link"
+          >
+            <TwitterIcon className="social-icon" />
           </a>
         </div>
       </div>
