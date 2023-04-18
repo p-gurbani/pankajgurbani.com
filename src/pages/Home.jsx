@@ -29,7 +29,7 @@ const Home = () => {
   };
 
   return (
-    <div className="page-container pb-0">
+    <div className="page-container py-0">
       <Helmet>
         <title>
           Pankaj Gurbani - Turning Ideas into Amazing Shopify Stores
@@ -43,15 +43,26 @@ const Home = () => {
       <ScrollToTopButton />
 
       {/* Headline, Subtitle, CTA */}
-      <section aria-label="Hero Section" className="max-w section space-y-12 text-center mt-16 md:mt-20">
+      <section
+        aria-label="Hero Section"
+        className="max-w section space-y-12 text-center justify-center min-h-[60vh]"
+      >
         <h1 className="heading-1 max-w-3xl 2xl:max-w-4xl">
-          I turn your ideas <br />
-          into amazing{" "}
+          Let's build and grow <br />
+          your{" "}
           <span className="text-heading-highlight dark:text-night-heading-highlight">
             Shopify
           </span>{" "}
-          stores.
+          store.
         </h1>
+        {/* <h1 className="heading-1 max-w-3xl 2xl:max-w-4xl">
+          Let's turn your idea <br />
+          into an amazing{" "}
+          <span className="text-heading-highlight dark:text-night-heading-highlight">
+            Shopify
+          </span>{" "}
+          store.
+        </h1> */}
         <p className="para-lg">
           More customers. More sales. 🚀
           <br />
@@ -217,10 +228,13 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section aria-label="Testimonials" className="section bg-testimonial-section-bg dark:bg-night-testimonial-section-bg">
+      <section
+        aria-label="Testimonials"
+        className="section bg-testimonial-section-bg dark:bg-night-testimonial-section-bg"
+      >
         <div className="max-w flex flex-col items-center space-y-12 py-16 md:py-18">
           <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center text-night-heading">
-            Hear from my happy clients :)
+            Hear from our happy clients :)
           </h2>
           <p className="sub-para max-w-md md:max-w-3xl text-night-body">
             I've been able to work with{" "}
@@ -290,7 +304,10 @@ const Home = () => {
       </section>
 
       {/* Blogs (Continue exploring) */}
-      <section aria-label="Ecommerce blogs by Pankaj Gurbani" className="section max-w">
+      <section
+        aria-label="Ecommerce blogs by Pankaj Gurbani"
+        className="section max-w"
+      >
         <div className="max-w-3xl section">
           <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
             Learn more about growing your eCommerce business.
@@ -310,7 +327,10 @@ const Home = () => {
       </section>
 
       {/* Subscribe to my newsletter */}
-      <section aria-label="Subscribe to my newsletter" className="section w-full max-w">
+      <section
+        aria-label="Subscribe to my newsletter"
+        className="section w-full max-w"
+      >
         <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
           Subscribe to my newsletter.
         </h2>
@@ -325,7 +345,10 @@ const Home = () => {
       </section>
 
       {/* FAQ */}
-      <section aria-label="Frequently Asked Questions (FAQ)" className="section max-w">
+      <section
+        aria-label="Frequently Asked Questions (FAQ)"
+        className="section max-w"
+      >
         <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
           FAQs
         </h2>
@@ -357,7 +380,10 @@ const Home = () => {
       </section>
 
       {/* Freebie */}
-      <section aria-label="Free Ebook to learn shopify administration" className="section bg-ebook-section-bg dark:bg-night-ebook-section-bg">
+      <section
+        aria-label="Free Ebook to learn shopify administration"
+        className="section bg-ebook-section-bg dark:bg-night-ebook-section-bg"
+      >
         <div className="max-w flex flex-col md:flex-row md:items-center space-y-12 md:space-x-8 md:space-y-0 py-16 md:py-20">
           {/* Image */}
           <img
