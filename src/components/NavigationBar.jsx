@@ -23,7 +23,7 @@ function NavigationBar() {
       <div className="max-w">
         <div className="flex items-center justify-between h-16">
           <div>
-            <NavLink className="flex gap-2 items-center" to="/">
+            <NavLink className="flex gap-3 items-center" to="/">
               <img
                 src={AboutMe.ProfileLogo}
                 alt="Rivo logo"
