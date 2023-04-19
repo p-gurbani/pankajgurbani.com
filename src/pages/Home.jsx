@@ -54,14 +54,6 @@ const Home = () => {
           </span>{" "}
           store.
         </h1>
-        {/* <h1 className="heading-1 max-w-3xl 2xl:max-w-4xl">
-          Let's turn your idea <br />
-          into an amazing{" "}
-          <span className="text-heading-highlight dark:text-night-heading-highlight">
-            Shopify
-          </span>{" "}
-          store.
-        </h1> */}
         <p className="para-lg">
           More customers. More sales. 🚀
           <br />
@@ -108,20 +100,27 @@ const Home = () => {
           <img
             src={MeenacGarden.Home}
             className="marquee-img"
-            alt="meenac garden shopify website homepage"
+            alt="meenac garden shopify shopify store homepage"
             fetchpriority="high"
           />
           <img
             src={Projects.Babylux}
             className="marquee-img"
-            alt="Babylux website homepage"
+            alt="Babylux shopify store homepage"
+            fetchpriority="high"
+            loading="lazy"
+          />
+          <img
+            src={Projects.DollarSign}
+            className="marquee-img"
+            alt="DollarSign shopify store homepage"
             fetchpriority="high"
             loading="lazy"
           />
           <img
             src={Projects.Lase}
             className="marquee-img"
-            alt="LASE website homepage"
+            alt="LASE shopify store homepage"
             loading="lazy"
           />
         </Marquee>
@@ -242,26 +241,14 @@ const Home = () => {
           </p>
           <div className="flex flex-col space-y-8 md:max-w-3xl 2xl:max-w-4xl">
             <img
-              src={Testimonials.EffieDark}
-              className="rounded-lg hidden dark:block"
-              alt="Testimonial of effie zhang (night mode) from fonteva"
-              loading="lazy"
-            />
-            <img
               src={Testimonials.Effie}
-              className="rounded-lg dark:hidden"
+              className="rounded-lg"
               alt="Testimonial of effie zhang from fonteva"
               loading="lazy"
             />
             <img
-              src={Testimonials.UlasDark}
-              className="rounded-lg hidden dark:block"
-              alt="Testimonial of Ulas Kutuk from fonteva"
-              loading="lazy"
-            />
-            <img
               src={Testimonials.Ulas}
-              className="rounded-lg dark:hidden"
+              className="rounded-lg"
               alt="Testimonial of Ulas Kutuk from fonteva"
               loading="lazy"
             />
@@ -393,8 +380,8 @@ const Home = () => {
           />
 
           {/* Description */}
-          <div className="flex flex-1 flex-col space-y-4 px-4">
-            <h2 className="heading-2 font-medium">
+          <div className="flex flex-1 flex-col gap-6 md:gap-8 px-4">
+            <h2 className="heading-2 font-bold">
               An A-Z Guide to managing your Shopify store.
             </h2>
             <p className="para">Finding it difficult to use Shopify?</p>
