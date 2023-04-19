@@ -26,9 +26,9 @@ module.exports = {
         "card-bg": "#F8F8F8",
         "card-bg-1": "#E1E8F2",
         "card-bg-2": "#E1F1F3",
-        "card-bg-3": "#F4EFDA",
-        "ebook-section-bg": "#DCF0FA",
-        "testimonial-section-bg": "#224563",
+        "card-bg-3": "#D1E1F3",
+        "ebook-section-bg": "#E1F1F3",
+        "testimonial-section-bg": "#334b6d",
         // night mode colors
         "night-heading": "#E2E5E8",
         "night-heading-highlight": "#1BCEA5",
@@ -38,10 +38,10 @@ module.exports = {
         "night-cta-gradient-end": "#834B6D",
         "night-card-bg": "#232323",
         "night-card-bg-1": "#2D3748",
-        "night-card-bg-2": "#3D446f",
+        "night-card-bg-2": "#134b5d",
         "night-card-bg-3": "#334b6d",
-        "night-ebook-section-bg": "#334b6d",
-        "night-testimonial-section-bg": "#2A3548",
+        "night-ebook-section-bg": "#134b5d",
+        "night-testimonial-section-bg": "#224563",
       },
       backgroundImage: (theme) => ({
         "cta-gradient": `linear-gradient(to right, ${theme(
