@@ -38,6 +38,7 @@ export const Testimonials = {
 
 export const Projects = {
   Babylux: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/babylux.jpg",
+  DollarSign: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/dollar-sign-shopify-store.jpg",
   Lase: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/lase-website.jpg",
   LaseLogo: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-200/lase-logo.png",
   LaseCover:
