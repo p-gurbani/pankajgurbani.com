@@ -52,7 +52,7 @@ const ContactMe = () => {
         />
       </Helmet>
       <section aria-label="Contact Form" className="section gap-2 mt-16 md:mt-20">
-        <h1 className="heading-1 text-center max-w-xl !text-transparent bg-clip-text bg-gradient-to-r dark:bg-gradient-to-r from-cta-gradient-start to-night-cta-gradient-end dark:from-night-cta-gradient-start dark:to-night-cta-gradient-end">
+        <h1 className="heading-1 text-center max-w-xl heading-gradient">
           Get in touch.
         </h1>
         <p className="para-md font-medium max-w-md text-center">
@@ -109,7 +109,7 @@ const ContactMe = () => {
         </form>
 
         <p className="para text-gray-600 dark:text-gray-400 max-w-md text-center">
-          or send me an email at{" "}
+          or send me an email at{" "}<br/>
           <a
             className="underline underline-offset-2 font-medium"
             href="mailto:pankajgurbani.connect@gmail.com"
