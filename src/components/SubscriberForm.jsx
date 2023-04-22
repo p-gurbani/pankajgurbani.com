@@ -46,7 +46,7 @@ const SubscriberForm = ({
   return (
     <form
       ref={form}
-      className={`flex md:space-x-4 w-full md:w-max items-stretch flex-col md:flex-row space-x-0 space-y-4 md:space-y-0 ${formClass}`}
+      className={`flex w-full md:w-max items-stretch flex-col md:flex-row space-x-0 space-y-4 md:space-y-0 ${formClass}`}
       onSubmit={sendEmail}
     >
       <input
@@ -54,12 +54,12 @@ const SubscriberForm = ({
         placeholder="Enter your email"
         type="email"
         required
-        className={`text-field flex-1 ${inputClass}`}
+        className={`text-field md:rounded-r-none flex-1 ${inputClass}`}
         name="email"
       />
       <button
         type="submit"
-        className={`btn-secondary md:w-max w-full ${btnClass}`}
+        className={`btn-cta btn-grad md:rounded-l-none md:w-max md:border-l-0 w-full ${btnClass}`}
       >
         <span>{btnLabel}</span>
       </button>
