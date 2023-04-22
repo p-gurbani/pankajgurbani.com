@@ -315,19 +315,27 @@ const Home = () => {
       {/* Subscribe to my newsletter */}
       <section
         aria-label="Subscribe to my newsletter"
-        className="section w-full max-w"
+        className="section w-full max-w gap-10 relative"
       >
-        <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
-          Subscribe to my newsletter.
-        </h2>
         <p className="sub-para max-w-md md:max-w-2xl">
-          Get the best ecommerce tips, guides, and insights{" "}
-          <span className="underline-highlight">directly in your inbox</span>.
-          No spam. Promise.
+          Subscribe to my{" "}
+          free weekly newsletter.<br/>Get The best eCommerce tips, content and stories. <span className="underline-highlight">Every Monday</span>.
         </p>
-        <Suspense fallback={<></>}>
-          <SubscriberForm formClass="px-4" inputClass="py-5 md:py-1 md:w-96" />
-        </Suspense>
+        <iframe
+          src="https://embeds.beehiiv.com/4b367193-1ec0-4170-834c-ef2db56f357a"
+          data-test-id="beehiiv-embed"
+          width="100%"
+          height="320"
+          frameBorder="0"
+          scrolling="no"
+          style={{
+            borderRadius: "4px",
+            border: "2px solid #e5e7eb",
+            margin: 0,
+            backgroundColor: "transparent",
+          }}
+        ></iframe>
+        <div className="w-20 h-10 bg-[#222222] absolute bottom-2 right-8 md:right-12"></div>
       </section>
 
       {/* FAQ */}
@@ -340,14 +348,14 @@ const Home = () => {
         </h2>
         <div className="qna-root md:max-w-2xl">
           <div className="qna-container">
-            <h4>What is Shopify?</h4>
+            <h5>What is Shopify?</h5>
             <p>
               Shopify is an online platform that allows you to create and manage
               your own ecommerce website.
             </p>
           </div>
           <div className="qna-container">
-            <h4>How much does it cost to create a Shopify store?</h4>
+            <h5>How much does it cost to create a Shopify store?</h5>
             <p>
               The cost of creating a Shopify store varies depending on your
               needs and the complexity of the project. Contact me for more
@@ -355,7 +363,7 @@ const Home = () => {
             </p>
           </div>
           <div className="qna-container">
-            <h4>How long does it take to create a custom Shopify store?</h4>
+            <h5>How long does it take to create a custom Shopify store?</h5>
             <p>
               For a basic store, it usually takes around{" "}
               <span className="underline-highlight">15 - 20 days</span>. As the
@@ -393,7 +401,7 @@ const Home = () => {
             <span className="py-2"></span>
             <Suspense fallback={<></>}>
               <SubscriberForm
-                inputClass="md:w-52 lg:w-64 py-5 md:py-1"
+                inputClass="md:w-48 lg:w-64 py-5 md:py-1"
                 btnLabel="Get Free PDF"
                 thankYouPara="You will receive an email with your PDF soon."
               />
