@@ -322,6 +322,7 @@ const Home = () => {
           free weekly newsletter.<br/>Get The best eCommerce tips, content and stories. <span className="underline-highlight">Every Monday</span>.
         </p>
         <iframe
+          title="Subscribe to my newsletter"
           src="https://embeds.beehiiv.com/4b367193-1ec0-4170-834c-ef2db56f357a"
           data-test-id="beehiiv-embed"
           width="100%"
