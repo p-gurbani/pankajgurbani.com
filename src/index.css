@@ -29,7 +29,7 @@
   }
 
   .btn-cta {
-    @apply text-center text-white py-5 px-4 sm:px-10 bg-gradient-to-r from-cta-gradient-start to-cta-gradient-end dark:from-night-cta-gradient-start dark:to-night-cta-gradient-end rounded-lg font-medium text-xl;
+    @apply text-center custom-border text-white py-5 px-4 sm:px-10 bg-gradient-to-r from-cta-gradient-start to-cta-gradient-end dark:from-night-cta-gradient-start dark:to-night-cta-gradient-end rounded-lg font-medium text-xl;
   }
 
   h1,
@@ -93,7 +93,7 @@
   }
 
   .btn-secondary {
-    @apply inline-block btn-cta bg-[length:400%_400%] p-[2px] text-center;
+    @apply inline-block btn-cta bg-[length:400%_400%] p-[2px] text-center border-0;
   }
 
   .btn-secondary span {
@@ -132,16 +132,20 @@
     @apply flex flex-col space-y-2 max-w-3xl;
   }
 
-  .qna-container h4 {
-    @apply heading-4 font-bold;
+  .qna-container h5 {
+    @apply heading-5 font-semibold pb-2;
   }
 
   .qna-container p {
-    @apply text-base;
+    @apply text-base text-gray-800 dark:text-gray-200;
   }
 
   .text-field {
-    @apply border w-full dark:placeholder-gray-300 placeholder-gray-500 border-gray-800 dark:border-gray-200 bg-body-bg dark:bg-transparent rounded-lg px-6 focus:outline-none;
+    @apply custom-border w-full dark:placeholder-gray-300 placeholder-gray-500 bg-body-bg dark:bg-night-body-bg rounded-lg px-6 focus:outline-none;
+  }
+
+  .custom-border {
+    @apply border border-gray-800 dark:border-night-cta-gradient-start;
   }
 
   .social-icon-link:hover .social-icon {
