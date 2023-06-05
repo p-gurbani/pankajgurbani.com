@@ -58,7 +58,7 @@ const MeenacGarden = () => {
         {/* Overview */}
         <h2 className="heading-2">Overview</h2>
         <p className="story-para">
-          Meenac Garden is a small business based in UAE that sells indoor
+          Meenac Garden is a business based in UAE that sells indoor
           plants for home and office decor.
         </p>
         <p className="story-para">
