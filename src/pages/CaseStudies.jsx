@@ -14,19 +14,16 @@ const CaseStudies = () => {
       </Helmet>
       <section
         aria-label="Case Studies"
-        className="section gap-12 mt-16 md:mt-20"
+        className="section mt-16 md:mt-20"
       >
         {/* Heading */}
-        <h1 className="heading-1 text-center max-w-xl">
-          Some of our{" "}
-          <span className="text-heading-highlight dark:text-night-heading-highlight">
-            best
-          </span>{" "}
-          work.
+        <h1 className="heading-1 text-center max-w-2xl">
+          No bragging, just awesome work. 😉
         </h1>
+        <p className="para-lg max-w-xs md:max-w-lg">Have a look at some of our best projects.</p>
 
         {/* Work */}
-        <div className="project-gallery max-w w-full px-4">
+        <div className="project-gallery pt-12 max-w w-full px-4">
           {/* Meenac Garden */}
           <div className="project-wrapper">
             <div className="project-img-box">
@@ -37,9 +34,12 @@ const CaseStudies = () => {
               <img src={MeenacGarden.Logo} alt="Meenac Garden Logo" />
               {/* Desc */}
               <p className="para project-desc">
-                A brand selling indoor plants for home/office decor. We helped
-                them rebrand, create their online store, and grow their
-                business.
+                Your go-to brand for stunning indoor plants that liven up your
+                home or office. <br />
+                <br />
+                We joined forces to revamp their brand, set up a thriving online
+                store, and help them deeply connect with their customers on
+                social media.
               </p>
               <p className="project-categories">
                 Branding | E-commerce | Social Media
@@ -61,8 +61,9 @@ const CaseStudies = () => {
               <img src={Projects.PaavniLogo} alt="Paavni Logo" />
               {/* Desc */}
               <p className="para project-desc">
-                Organic skincare that's pure and true, we helped Paavni find
-                their brand voice and connect with their audience anew.
+                Organic skincare that's pure and true. We teamed up to discover
+                their brand voice and form genuine connections with their
+                audience.
               </p>
               <p className="project-categories">Branding | Social Media</p>
               {/* View case study button */}
@@ -86,9 +87,9 @@ const CaseStudies = () => {
               />
               {/* Desc */}
               <p className="para project-desc">
-                A catering business that serves the best, with a brand new logo
-                and a website to impress. We helped them build an online booking
-                system.
+                A top-tier catering business, serving nothing but the best.
+                Together, we crafted a seamless online booking system for their
+                customers' convenience.
               </p>
               <p className="project-categories">Branding | E-commerce</p>
               {/* View case study button */}

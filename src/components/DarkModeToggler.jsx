@@ -10,10 +10,7 @@ function DarkModeToggler() {
     if (local === "false") {
       return false;
     }
-    if (new Date().getHours() >= 18 || new Date().getHours() <= 6) {
-      return true;
-    }
-    return false;
+    return true;
   };
 
   const [isDarkMode, setDarkMode] = useState(isAutoDarkMode());

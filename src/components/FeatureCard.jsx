@@ -3,7 +3,7 @@ const FeatureCard = ({ children, heading }) => {
     <div className="feature-card">
       {/* Title */}
       <h3 className="heading-3">{heading}</h3>
-      <p>{children}</p>
+      <p className="para-sm">{children}</p>
     </div>
   );
 };

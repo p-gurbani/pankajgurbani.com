@@ -29,7 +29,7 @@ function NavigationBar() {
                 alt="Rivo logo"
                 className="w-8 rounded-lg"
               />
-              <h1 className="text-body dark:text-night-body font-bold text-lg">
+              <h1 className="text-body dark:text-night-body font-medium text-lg">
                 Pankaj Gurbani
               </h1>
             </NavLink>

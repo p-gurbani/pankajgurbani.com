@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import {
   MeenacGarden,
@@ -16,20 +16,32 @@ import { Helmet } from "react-helmet";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 import Marquee from "react-fast-marquee";
-// const Marquee = lazy(() => import("react-fast-marquee"));
 const PopupModal = lazy(() => import("../libs/Calendly.js"));
-const MediumBlogs = lazy(() => import("../components/MediumBlogs"));
 const SubscriberForm = lazy(() => import("../components/SubscriberForm"));
+// const Marquee = lazy(() => import("react-fast-marquee"));
+// const MediumBlogs = lazy(() => import("../components/MediumBlogs"));
 
 const Home = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+  const faqRef = useRef(null);
+
+  const expandFAQ = (e) => {
+    const faqItems = faqRef.current.querySelectorAll(".qna-container");
+    faqItems.forEach((el) => {
+      if (el.contains(e.target)) {
+        el.classList.toggle("qna-active");
+      } else {
+        el.classList.remove("qna-active");
+      }
+    });
+  };
 
   const handleBookConsultation = () => {
     setIsCalendlyOpen(true);
   };
 
   return (
-    <div className="page-container py-0">
+    <div className="page-container pt-0">
       <Helmet>
         <title>
           Pankaj Gurbani - Shopify Store Design, Development, and Marketing.
@@ -47,22 +59,24 @@ const Home = () => {
         aria-label="Hero Section"
         className="max-w section space-y-12 text-center justify-center min-h-[60vh]"
       >
-        <h1 className="heading-1 max-w-2xl">
-          We design, develop, and grow your{" "}
+        <h1 className="heading-1 max-w-2xl lg:max-w-4xl">
+          Launch Your{" "}
           <span className="text-heading-highlight dark:text-night-heading-highlight">
-            shopify
+            Dream Shopify Store
           </span>{" "}
-          store.
+          in Less than 14 Days.
         </h1>
-        <p className="para-lg">
-          More customers. More sales. 🚀
-          <br />
-          <span className="underline-highlight">Zero</span> stress.
+        {/* <p className="para-lg">Maximize Sales. 🚀 Minimize stress. 🥳</p> */}
+        <p className="para-lg max-w-xs md:max-w-lg">
+          Power your sales. 🚀 Lower your stress. 🥳
         </p>
-        <div className="pt-8 md:pt-0">
+        <div className="pt-12 px-4 md:pt-8">
           <button onClick={handleBookConsultation} className="btn-cta btn-grad">
-            Schedule a <b>Free</b> 30 Mins Consultation
+            Book a <b>Free</b> 30-Minute Consultation Today!
           </button>
+          <div className="para-xs mt-2">
+            Zero obligations. Just a friendly zoom call to discuss your goals :)
+          </div>
         </div>
       </section>
 
@@ -126,18 +140,23 @@ const Home = () => {
         </Marquee>
       </section>
 
+      {/* Copy */}
+      {/* <section className="section max-w">
+        <p className="sub-para max-w-md md:max-w-xl">
+          You have a brilliant business idea and you're eager to turn it into a
+          thriving online store. But, the technicalities, design, and
+          optimization process <b>feels overwhelming</b>. Right?
+        </p>
+      </section> */}
+
       {/* Explore, how we can help your business grow. */}
       <section className="section max-w">
         <h2 className="heading-2 max-w-md md:max-w-3xl text-center">
-          Explore, how we can help your business grow.
+          Say goodbye to headaches and let us handle the heavy lifting.
         </h2>
-        <p className="sub-para max-w-md md:max-w-3xl">
-          Our team of Shopify Experts can help you start and grow your online
-          business,{" "}
-          <span className="underline-highlight">
-            so you can focus on what you do best
-          </span>
-          .
+        <p className="sub-para max-w-md md:max-w-2xl">
+          Explore, how we can help your business grow. So you can focus on{" "}
+          <span className="underline-highlight">what you do best</span>.
         </p>
         <div className="responsive-flex">
           <StageCard
@@ -145,10 +164,8 @@ const Home = () => {
             className="bg-card-bg-1 dark:bg-night-card-bg-1"
             title="Begin your journey."
             features={[
-              "Setup your Shopify store",
-              "Choose and customize your theme",
-              "Add products",
-              "Create collections",
+              "Setup and customize your Shopify store",
+              "Add products & collections",
               "Setup shipping & payment methods",
               "Start selling!",
             ]}
@@ -158,13 +175,11 @@ const Home = () => {
             className="bg-card-bg-2 dark:bg-night-card-bg-2"
             title="Level up."
             features={[
-              "Stand out with custom themes",
               "Improve user experience",
               "Boost conversion rate",
               "Write copy that sells",
-              "Studio quality product images",
-              "Build custom strategies",
-              "More features",
+              "Create custom landing pages",
+              "Email marketing & automation",
             ]}
           />
           <StageCard
@@ -172,10 +187,9 @@ const Home = () => {
             className="bg-card-bg-3 dark:bg-night-card-bg-3"
             title="Become a pro."
             features={[
-              "Bring your unique ideas to life with custom storefronts",
-              "Develop apps for custom functionality",
+              "Develop custom themes & apps",
+              "Connect your store with Instagram, Google, Pinterest, and more",
               "Streamline and automate manual processes",
-              "3D product images",
               "Integrate with other tools and platforms",
             ]}
           />
@@ -191,34 +205,31 @@ const Home = () => {
           <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
             But, that’s not all.
           </h2>
-          <p className="sub-para max-w-md md:max-w-3xl">
-            At each stage, we can help you reach and{" "}
+          <p className="sub-para max-w-md md:max-w-2xl">
+            We're here to help you reach and{" "}
             <span className="underline-highlight">
-              build strong connections with your customers
-            </span>
-            .
+              build strong connections
+            </span>{" "}
+            with your customers at every stage.
           </p>
           <div className="flex flex-col space-y-2">
             <div className="feature-card-container">
               <FeatureCard heading="Social Media Marketing">
-                Let us help you create a <b>buzz</b> and connect with your
-                audience on social media.
+                Let's create a <i>buzzz</i> and connect with your audience on
+                social media.
               </FeatureCard>
               <FeatureCard heading="SEO">
-                Get found online 👀 with our proven SEO techniques. We'll
-                optimize your website to <b>rank higher</b> in search engine
-                results.
+                Watch your website climb the search engine rankings!
               </FeatureCard>
             </div>
             <div className="feature-card-container">
               <FeatureCard heading="Email Marketing">
-                Stay top of mind with your customers through personalized 💌
-                email campaigns. We'll help you craft the <b>perfect message</b>
-                .
+                Stay top of mind with your customers through personalized email
+                campaigns.
               </FeatureCard>
               <FeatureCard heading="Paid Ads">
-                Drive traffic and sales with our targeted paid advertising
-                campaigns 📈 Let us help you reach your <b>ideal audience</b>.
+                Let us help you reach your ideal audience and drive
+                traffic and sales.
               </FeatureCard>
             </div>
           </div>
@@ -232,14 +243,21 @@ const Home = () => {
       >
         <div className="max-w flex flex-col items-center space-y-12 py-16 md:py-18">
           <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center text-night-heading">
-            Hear from our happy clients :)
+            See what our clients are saying :)
           </h2>
-          <p className="sub-para max-w-md md:max-w-3xl text-night-body">
-            I've been able to work with{" "}
-            <span className="underline-highlight"> amazing clients</span>, and
-            I'm glad that they enjoyed working with me too!
+          <p className="sub-para max-w-md md:max-w-2xl text-night-body">
+            Working with{" "}
+            <span className="underline-highlight">incredible clients</span> has
+            been a joy, and their satisfaction is what fuels my passion for
+            excellence!
           </p>
           <div className="flex flex-col space-y-8 md:max-w-3xl 2xl:max-w-4xl">
+            <img
+              src={Testimonials.MeenakshiRani}
+              className="rounded-lg"
+              alt="Testimonial of Meenakshi Rani from Meenac Garden"
+              loading="lazy"
+            />
             <img
               src={Testimonials.Effie}
               className="rounded-lg"
@@ -263,7 +281,7 @@ const Home = () => {
       </section>
 
       {/* Let's turn your ecommerce idea into reality */}
-      <section className="section max-w pb-20">
+      <section className="section max-w pb-12">
         <div className="flex flex-col gap-12 items-center">
           {/* Image */}
           <img
@@ -274,23 +292,26 @@ const Home = () => {
           />
 
           {/* Description */}
-          <div className="flex flex-1 flex-col items-center md:items-start space-y-8 px-4">
-            <p className="text-xl md:text-2xl max-w-sm text-left md:text-center">
-              Let’s turn your ecommerce idea into a{" "}
-              <span className="underline-highlight">reality</span>.
+          <div className="flex flex-1 flex-col items-center space-y-8 px-4">
+            <h2 className="heading-2 max-w max-w-md md:max-w-2xl text-center">
+              Let’s turn your ecommerce idea into a reality.
+            </h2>
+            <p className="sub-para max-w-md md:max-w-3xl">
+              If you're interested, we can dive into the possibilities together.
+              {/* during a 30-minute consultation. */}
             </p>
             <button
               onClick={handleBookConsultation}
-              className="btn-cta btn-grad w-full"
+              className="btn-cta btn-grad"
             >
-              Schedule a Free Consultation
+              Book a <b>Free</b> 30-Minute Consultation
             </button>
           </div>
         </div>
       </section>
 
       {/* Blogs (Continue exploring) */}
-      <section
+      {/* <section
         aria-label="Ecommerce blogs by Pankaj Gurbani"
         className="section max-w"
       >
@@ -305,22 +326,105 @@ const Home = () => {
             </span>{" "}
             to grow your ecommerce business.
           </p>
-          {/* Articles */}
           <Suspense fallback={<></>}>
             <MediumBlogs username="pankajgurbani" />
           </Suspense>
+        </div>
+      </section> */}
+
+      {/* FAQ */}
+      <section
+        aria-label="Frequently Asked Questions (FAQ)"
+        className="section max-w"
+      >
+        <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center pb-4">
+          FAQs
+        </h2>
+        <div ref={faqRef} className="qna-root md:max-w-6xl">
+          <div className="qna-container qna-active" onClick={expandFAQ}>
+            <h3 className="qna-question">
+              Is there any commitment required after the consultation call?
+            </h3>
+            <p className="qna-answer">
+              Absolutely not! The consultation call is a chance for me to
+              understand your needs and offer recommendations. You're under{" "}
+              <span className="underline-highlight">no obligation</span> to
+              proceed with our services. It's completely your decision, and I
+              respect that.
+            </p>
+          </div>
+          <div className="qna-container" onClick={expandFAQ}>
+            <h3 className="qna-question">
+              How much do your Shopify services cost?
+            </h3>
+            <p className="qna-answer">
+              Our pricing is tailored to suit the specific needs of each client.
+              We offer customized packages that align with your requirements and
+              budget. Let's have a chat during the consultation call, and I'll
+              provide you with a transparent quote.
+            </p>
+          </div>
+          <div className="qna-container" onClick={expandFAQ}>
+            <h3 className="qna-question">
+              How long does it take to launch my Shopify store?
+            </h3>
+            <p className="qna-answer">
+              The timeline for launching your store depends on various factors
+              such as its complexity and your requirements. <br />
+              <br />
+              However, we're committed to delivering timely results. For a basic
+              Shopify store, it usually takes{" "}
+              <span className="underline-highlight">less than 14 days</span>.
+              During the consultation call, we'll discuss your project's
+              timeline and work together to achieve your desired launch date.
+            </p>
+          </div>
+          <div className="qna-container" onClick={expandFAQ}>
+            <h3 className="qna-question">
+              What if I already have a Shopify store but need improvements?
+            </h3>
+            <p className="qna-answer">
+              If you have an existing store that needs enhancements or a
+              complete makeover, we can identify areas for improvement and
+              implement the necessary changes to improve your store's
+              performance.
+            </p>
+          </div>
+          <div className="qna-container" onClick={expandFAQ}>
+            <h3 className="qna-question">
+              How do I get started with your Shopify services?
+            </h3>
+            <p className="qna-answer">
+              Getting started is easy! Simply schedule a free no-obligations
+              30-minute consultation with us, and we'll discuss your goals,
+              requirements, and expectations.
+              <br /> <br />
+              If interested, you can{" "}
+              <span
+                className="underline-highlight cursor-pointer"
+                onClick={handleBookConsultation}
+              >
+                click here
+              </span>{" "}
+              to schedule.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Subscribe to my newsletter */}
       <section
         aria-label="Subscribe to my newsletter"
-        className="section w-full max-w gap-10 relative"
+        className="section w-full max-w gap-10 relative pt-12"
       >
-        <p className="sub-para max-w-md md:max-w-2xl">
-          Subscribe to my{" "}
-          free weekly newsletter.<br/>Get The best eCommerce tips, content and stories. <span className="underline-highlight">Every Monday</span>.
-        </p>
+        <div className="space-y-8 flex flex-col items-center">
+          <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
+            Your monday mornings. <br /> Just got better. ☕
+          </h2>
+          <p className="sub-para max-w-md md:max-w-3xl">
+            Subscribe to my weekly eCommerce marketing newsletter. (It's free)
+          </p>
+        </div>
         <iframe
           title="Subscribe to my newsletter"
           src="https://embeds.beehiiv.com/4b367193-1ec0-4170-834c-ef2db56f357a"
@@ -330,65 +434,27 @@ const Home = () => {
           frameBorder="0"
           scrolling="no"
           style={{
-            borderRadius: "4px",
-            border: "2px solid #e5e7eb",
+            borderRadius: "12px",
+            border: "1px solid #95979b",
             margin: 0,
             backgroundColor: "transparent",
           }}
         ></iframe>
-        <div className="w-20 h-10 bg-[#222222] absolute bottom-2 right-8 md:right-12"></div>
-      </section>
-
-      {/* FAQ */}
-      <section
-        aria-label="Frequently Asked Questions (FAQ)"
-        className="section max-w"
-      >
-        <h2 className="heading-2 max-w max-w-md md:max-w-3xl text-center">
-          FAQs
-        </h2>
-        <div className="qna-root md:max-w-2xl">
-          <div className="qna-container">
-            <h5>What is Shopify?</h5>
-            <p>
-              Shopify is an online platform that allows you to create and manage
-              your own ecommerce website.
-            </p>
-          </div>
-          <div className="qna-container">
-            <h5>How much does it cost to create a Shopify store?</h5>
-            <p>
-              The cost of creating a Shopify store varies depending on your
-              needs and the complexity of the project. Contact me for more
-              details.
-            </p>
-          </div>
-          <div className="qna-container">
-            <h5>How long does it take to create a custom Shopify store?</h5>
-            <p>
-              For a basic store, it usually takes around{" "}
-              <span className="underline-highlight">15 - 20 days</span>. As the
-              complexity increases, so does the time.
-            </p>
-          </div>
-        </div>
+        <div className="w-20 h-10 bg-[#121212] absolute bottom-2 right-8 md:right-12"></div>
       </section>
 
       {/* Freebie */}
-      <section
+      {/* <section
         aria-label="Free Ebook to learn shopify administration"
         className="section bg-ebook-section-bg dark:bg-night-ebook-section-bg"
       >
         <div className="max-w flex flex-col md:flex-row md:items-center space-y-12 md:space-x-8 md:space-y-0 py-16 md:py-20">
-          {/* Image */}
           <img
             src={MasteringShopifyEbook}
             className="md:w-1/2 object-cover rounded-lg border border-black"
             alt="free shopify ebook"
             loading="lazy"
           />
-
-          {/* Description */}
           <div className="flex flex-1 flex-col gap-6 md:gap-8 px-4">
             <h2 className="heading-2 font-bold">
               An A-Z Guide to managing your Shopify store.
@@ -409,7 +475,7 @@ const Home = () => {
             </Suspense>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -109,7 +109,7 @@ const ContactMe = () => {
         </form>
 
         <p className="para text-gray-600 dark:text-gray-400 max-w-md text-center">
-          or send me an email at{" "}<br/>
+          or simply send me an email at{" "}<br/>
           <a
             className="underline underline-offset-2 font-medium"
             href="mailto:pankajgurbani.connect@gmail.com"

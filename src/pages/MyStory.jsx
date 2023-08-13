@@ -29,7 +29,9 @@ const MyStory = () => {
       </Helmet>
       {/* In a nutshell */}
       <section aria-label="About me" className="section max-w mt-16 md:mt-20">
-        <h1 className="heading-1 text-center max-w-3xl 2xl:max-w-4xl">In a nutshell.</h1>
+        <h1 className="heading-1 text-center max-w-3xl 2xl:max-w-4xl">
+          In a nutshell.
+        </h1>
         <div className="flex flex-col max-w-3xl md:flex-row md:items-center md:space-x-16 space-y-10 md:space-y-0">
           {/* Profile Image */}
           <img
@@ -86,7 +88,9 @@ const MyStory = () => {
 
       {/* The whole story */}
       <section aria-label="The whole story" className="section max-w">
-        <h1 className="heading-1 text-center max-w-3xl 2xl:max-w-4xl">The whole story.</h1>
+        <h1 className="heading-1 text-center max-w-3xl 2xl:max-w-4xl">
+          The whole story.
+        </h1>
         <p className="sub-para">
           Let me take you on a journey through my life.
         </p>
@@ -102,21 +106,24 @@ const MyStory = () => {
           led me to discover my passion for programming.
         </p>
         <p className="story-para">
-          When I was 11 years old, I first got my hands on a computer, and I was
-          instantly hooked. After a few years, I graduated with a ‘Bachelor of
-          Computer Applications’ degree.
+          At the age of 11, I was introduced to the world of computers, and from
+          that moment, I was captivated. Eventually, I earned my 'Bachelor of
+          Computer Applications' degree, a milestone that marked the beginning
+          of my professional journey.
         </p>
         <h3 className="heading-3 max-w-3xl 2xl:max-w-4xl">
           How I got my first job.
         </h3>
         <p className="story-para">
-          During my 2nd year of graduation, I landed a job as a web developer at
-          Concretio Apps. Working with a team of highly skilled and creative
-          people was an experience of a lifetime.
+          During my 2nd year of graduation, I secured a position as a web
+          developer at Concretio Apps. Working with a team of exceptional
+          talents, I thrived in an environment filled with creativity and
+          innovation.
         </p>
         <p className="story-para">
-          During this time, I got a chance to work with some of the most
-          innovative companies across the globe.
+          During this phase, I had the privilege of working with some of the
+          most innovative companies across the globe. These experiences
+          broadened my perspective and fueled my determination.
         </p>
         <div className="responsive-flex md:max-w-2xl lg:max-w-5xl">
           <img
@@ -131,9 +138,9 @@ const MyStory = () => {
           />
         </div>
         <p className="story-para">
-          After spending 3 years at Concretio, I decided to take the plunge and
-          become self-employed. It was a difficult decision, but I knew it was
-          the right one.
+          After dedicating 3 impactful years to Concretio, I decided to become
+          self-employed. It was a difficult decision, but I knew it was the
+          right one.
         </p>
         <p className="story-para">
           I started freelancing and worked on several projects, big and small.
@@ -153,9 +160,9 @@ const MyStory = () => {
           making a difference in their success.
         </p>
         <p className="story-para">
-          Being self-employed came with its own challenges and uncertainties,
-          but I never looked back. The freedom and flexibility that came with
-          running my own business were priceless.
+          Although the path of self-employment had its share of uncertainties, I
+          never once regretted my decision. The freedom and flexibility that
+          came with running my own business were truly invaluable.
         </p>
         <p className="story-para">
           I was able to follow my passion and help others at the same time. It
@@ -164,8 +171,9 @@ const MyStory = () => {
         <h3 className="heading-3 max-w-xl text-center">Present day.</h3>
         <p className="story-para">
           Today, I work remotely as a Shopify Expert, designing and developing
-          functional, aesthetic, and goal-driven eCommerce websites. The journey
-          to get here was filled with twists and turns.
+          eCommerce websites that seamlessly merge functionality, aesthetics,
+          and purpose. Reflecting on my journey, it's clear that the path to
+          this point was filled with unexpected turns and valuable lessons.
         </p>
         <div className="responsive-flex md:max-w-2xl lg:max-w-5xl">
           <img

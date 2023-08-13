@@ -34,17 +34,24 @@ export const Testimonials = {
     "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1080/testimonial-ulas-dark.jpg",
   George:
     "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1080/testimonial-george.png",
+  MeenakshiRani:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1200/meenakshi-rani-meenacgarden-testimonial?updatedAt=1691163514851",
 };
 
 export const Projects = {
-  Babylux: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/babylux.jpg",
-  DollarSign: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/dollar-sign-shopify-store.jpg",
+  Babylux:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/babylux.jpg",
+  DollarSign:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/dollar-sign-shopify-store.jpg",
   Lase: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/lase-website.jpg",
-  LaseLogo: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-200/lase-logo.png",
+  LaseLogo:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-200/lase-logo.png",
   LaseCover:
     "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1080/lase-cover.jpg",
-  PaavniLogo: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-200/paavni-logo.png",
-  PaavniCover: "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/paavni-cover.jpg",
+  PaavniLogo:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-200/paavni-logo.png",
+  PaavniCover:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/paavni-cover.jpg",
 };
 
 export const MasteringShopifyEbook =
