@@ -4,7 +4,6 @@ import {
   MeenacGarden,
   Partners,
   Projects,
-  MasteringShopifyEbook,
   EcommerceIntoReality,
   Testimonials,
 } from "../assets/images/cdn";
@@ -17,7 +16,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 
 import Marquee from "react-fast-marquee";
 const PopupModal = lazy(() => import("../libs/Calendly.js"));
-const SubscriberForm = lazy(() => import("../components/SubscriberForm"));
+// const SubscriberForm = lazy(() => import("../components/SubscriberForm"));
 // const Marquee = lazy(() => import("react-fast-marquee"));
 // const MediumBlogs = lazy(() => import("../components/MediumBlogs"));
 
@@ -228,8 +227,8 @@ const Home = () => {
                 campaigns.
               </FeatureCard>
               <FeatureCard heading="Paid Ads">
-                Let us help you reach your ideal audience and drive
-                traffic and sales.
+                Let us help you reach your ideal audience and drive traffic and
+                sales.
               </FeatureCard>
             </div>
           </div>
@@ -422,7 +421,8 @@ const Home = () => {
             Your monday mornings. <br /> Just got better. ☕
           </h2>
           <p className="sub-para max-w-md md:max-w-3xl">
-            Subscribe to my weekly eCommerce marketing newsletter. (It's free)
+            Get The best eCommerce tips, content and stories. Every Monday.
+            <br/>Subscribe to my <span className="underline-highlight">weekly newsletter</span>. (It's free)
           </p>
         </div>
         <iframe
