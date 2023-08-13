@@ -32,16 +32,16 @@ module.exports = {
         // night mode colors
         "night-heading": "#E2E5E8",
         "night-heading-highlight": "#1BCEA5",
-        "night-body": "#D1D1D1",
-        "night-body-bg": "#171717",
-        "night-cta-gradient-start": "#2A5186",
+        "night-body": "#C1C1C1",
+        "night-body-bg": "#050505",
+        "night-cta-gradient-start": "#2A61C6",
         "night-cta-gradient-end": "#834B6D",
-        "night-card-bg": "#232323",
+        "night-card-bg": "#191919",
         "night-card-bg-1": "#2D3748",
         "night-card-bg-2": "#134b5d",
         "night-card-bg-3": "#334b6d",
         "night-ebook-section-bg": "#134b5d",
-        "night-testimonial-section-bg": "#224563",
+        "night-testimonial-section-bg": "#123553",
       },
       backgroundImage: (theme) => ({
         "cta-gradient": `linear-gradient(to right, ${theme(

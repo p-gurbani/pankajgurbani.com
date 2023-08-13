@@ -49,11 +49,11 @@
   }
 
   .heading-1 {
-    @apply text-5xl md:text-6xl font-bold;
+    @apply text-4xl leading-[2.8rem] tracking-tight md:text-6xl lg:text-7xl font-bold;
   }
 
   .heading-2 {
-    @apply text-3xl md:text-4xl font-bold;
+    @apply text-3xl leading-[2.5rem] md:text-4xl font-bold;
   }
 
   .heading-3 {
@@ -116,6 +116,10 @@
     @apply text-sm md:text-base;
   }
 
+  .para-xs {
+    @apply text-xs md:text-sm;
+  }
+
   .para-lg {
     @apply text-xl md:text-2xl;
   }
@@ -125,19 +129,27 @@
   }
 
   .qna-root {
-    @apply px-4 flex flex-col space-y-10;
+    @apply px-4 flex flex-col space-y-6;
   }
 
   .qna-container {
-    @apply flex flex-col space-y-2 max-w-3xl;
+    @apply flex flex-col space-y-2 max-w-lg border-b-[0.5px] border-b-gray-600;
   }
 
-  .qna-container h5 {
-    @apply heading-5 font-semibold pb-2;
+  .qna-container .qna-question {
+    @apply heading-3 font-semibold pb-3 cursor-pointer;
   }
 
-  .qna-container p {
-    @apply text-base text-gray-800 dark:text-gray-200;
+  .qna-container .qna-answer {
+    @apply text-base text-gray-800 dark:text-gray-200 px-4 overflow-hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    transition: padding 0.5s ease;
+  }
+
+  .qna-container.qna-active .qna-answer {
+    @apply pb-6;
+    max-height: 999px;
   }
 
   .text-field {
@@ -218,7 +230,7 @@
   }
 
   img {
-    @apply dark:brightness-90;
+    @apply dark:brightness-95;
     transition: filter 0.3s;
   }
 }
