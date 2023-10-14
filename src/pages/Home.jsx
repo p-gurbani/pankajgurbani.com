@@ -343,7 +343,7 @@ const Home = () => {
         </div>
       </section> */}
 
-      <section className="section border-t-2 border-b-2 pt-4 pb-3">
+      <section className="section border-t-2 border-b-2 md:pt-4 md:pb-3 pt-3 pb-1">
         <Marquee speed={60} gradient={false}>
           <span className="marquee-text"><i>Shopify</i></span>
           <span className="marquee-text">Ecommerce</span>

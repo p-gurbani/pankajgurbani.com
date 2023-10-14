@@ -44,7 +44,7 @@
   }
 
   .marquee-text {
-    @apply text-4xl font-extrabold tracking-tighter px-4;
+    @apply text-2xl md:text-3xl font-extrabold tracking-tighter px-4;
   }
 
   .marquee-text:hover {
