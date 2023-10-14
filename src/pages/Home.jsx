@@ -292,7 +292,7 @@ const Home = () => {
       </section>
 
       {/* Let's turn your ecommerce idea into reality */}
-      <section className="section max-w pb-12">
+      <section className="section max-w">
         <div className="flex flex-col gap-12 items-center">
           {/* Image */}
           <img
@@ -342,6 +342,35 @@ const Home = () => {
           </Suspense>
         </div>
       </section> */}
+
+      <section className="section border-t-2 border-b-2 pt-4 pb-3">
+        <Marquee speed={60} gradient={false}>
+          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Ecommerce</span>
+          <span className="marquee-text"><i>Websites</i></span>
+          <span className="marquee-text">Social Media</span>
+          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Ecommerce</span>
+          <span className="marquee-text"><i>Websites</i></span>
+          <span className="marquee-text">Social Media</span>
+          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Ecommerce</span>
+          <span className="marquee-text"><i>Websites</i></span>
+          <span className="marquee-text">Social Media</span>
+          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Ecommerce</span>
+          <span className="marquee-text"><i>Websites</i></span>
+          <span className="marquee-text">Social Media</span>
+          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Ecommerce</span>
+          <span className="marquee-text"><i>Websites</i></span>
+          <span className="marquee-text">Social Media</span>
+          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Ecommerce</span>
+          <span className="marquee-text"><i>Websites</i></span>
+          <span className="marquee-text">Social Media</span>
+        </Marquee>
+      </section>
 
       {/* FAQ */}
       <section
@@ -434,7 +463,10 @@ const Home = () => {
           </h2>
           <p className="sub-para max-w-md md:max-w-3xl">
             Get The best eCommerce tips, content and stories. Every Monday.
-            <br/>Subscribe to my <span className="underline-highlight">weekly newsletter</span>. (It's free)
+            <br />
+            Subscribe to my{" "}
+            <span className="underline-highlight">weekly newsletter</span>.
+            (It's free)
           </p>
         </div>
         <iframe

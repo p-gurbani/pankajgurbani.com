@@ -43,6 +43,14 @@
     @apply h-[500px] 2xl:h-[650px] shadow rounded-md mx-4;
   }
 
+  .marquee-text {
+    @apply text-4xl font-extrabold tracking-tighter px-4;
+  }
+
+  .marquee-text:hover {
+    @apply text-white cursor-default;
+  }
+
   p,
   input {
     @apply text-body dark:text-night-body;
@@ -134,6 +142,10 @@
 
   .qna-container {
     @apply flex flex-col space-y-2 max-w-lg border-b-[0.5px] border-b-gray-600;
+  }
+
+  .qna-container:hover h3, .qna-container.qna-active h3 {
+    @apply text-white;
   }
 
   .qna-container .qna-question {
