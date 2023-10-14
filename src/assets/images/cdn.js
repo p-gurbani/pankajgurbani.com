@@ -37,9 +37,9 @@ export const Testimonials = {
   MeenakshiRani:
     "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1200/meenakshi-rani-meenacgarden-testimonial?updatedAt=1691163514851",
   TwirlAroundWorld:
-    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/twirlaroundworld/testimonials/tr:w-1200/twirl-around-world-testimonial-1.jpg?updatedAt=1697263212828",
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/twirlaroundworld/testimonials/twirl-around-world-testimonial-1.jpg?updatedAt=1697264688641",
   TwirlAroundWorld2:
-    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/twirlaroundworld/testimonials/twirl-around-world-testimonial-2.jpg?updatedAt=1697263243646",
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/twirlaroundworld/testimonials/twirl-around-world-testimonial-2.jpg?updatedAt=1697264688535",
 };
 
 export const Projects = {
