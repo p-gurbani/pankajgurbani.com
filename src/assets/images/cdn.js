@@ -36,9 +36,15 @@ export const Testimonials = {
     "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1080/testimonial-george.png",
   MeenakshiRani:
     "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1200/meenakshi-rani-meenacgarden-testimonial?updatedAt=1691163514851",
+  TwirlAroundWorld:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/twirlaroundworld/testimonials/tr:w-1200/twirl-around-world-testimonial-1.jpg?updatedAt=1697263212828",
+  TwirlAroundWorld2:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/twirlaroundworld/testimonials/twirl-around-world-testimonial-2.jpg?updatedAt=1697263243646",
 };
 
 export const Projects = {
+  TwirlAroundWorld:
+    "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/twirlaroundworld/tr:w-1280/twirl-around-world-home-page-4.jpg?updatedAt=1697261456900",
   Babylux:
     "https://ik.imagekit.io/pankajgurbani/pankajgurbani_com/tr:w-1280/babylux.jpg",
   DollarSign:

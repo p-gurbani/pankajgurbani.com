@@ -117,6 +117,12 @@ const Home = () => {
             fetchpriority="high"
           />
           <img
+            src={Projects.TwirlAroundWorld}
+            className="marquee-img"
+            alt="twirl around world shopify store homepage"
+            fetchpriority="high"
+          />
+          <img
             src={Projects.Babylux}
             className="marquee-img"
             alt="Babylux shopify store homepage"
@@ -128,12 +134,6 @@ const Home = () => {
             className="marquee-img"
             alt="DollarSign shopify store homepage"
             fetchpriority="high"
-            loading="lazy"
-          />
-          <img
-            src={Projects.Lase}
-            className="marquee-img"
-            alt="LASE shopify store homepage"
             loading="lazy"
           />
         </Marquee>
@@ -255,6 +255,18 @@ const Home = () => {
               src={Testimonials.MeenakshiRani}
               className="rounded-lg"
               alt="Testimonial of Meenakshi Rani from Meenac Garden"
+              loading="lazy"
+            />
+            <img
+              src={Testimonials.TwirlAroundWorld}
+              className="rounded-lg"
+              alt="Testimonial of Annu Goyal from Twirl Around World"
+              loading="lazy"
+            />
+            <img
+              src={Testimonials.TwirlAroundWorld2}
+              className="rounded-lg"
+              alt="Testimonial of Annu Goyal from Twirl Around World"
               loading="lazy"
             />
             <img

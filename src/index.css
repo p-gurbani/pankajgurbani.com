@@ -40,7 +40,7 @@
   }
 
   .marquee-img {
-    @apply h-[450px] 2xl:h-[650px] shadow rounded-md mx-4;
+    @apply h-[500px] 2xl:h-[650px] shadow rounded-md mx-4;
   }
 
   p,
