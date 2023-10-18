@@ -13,6 +13,13 @@ import StageCard from "../components/StageCard";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import {
+  m as motion,
+  useTime,
+  useTransform,
+  useScroll
+} from "framer-motion";
+import { createTubelightMatrix } from "../libs/FramerUtils";
 
 import Marquee from "react-fast-marquee";
 const PopupModal = lazy(() => import("../libs/Calendly.js"));
@@ -23,6 +30,44 @@ const PopupModal = lazy(() => import("../libs/Calendly.js"));
 const Home = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const faqRef = useRef(null);
+  const time = useTime();
+
+  // Tubelight effect in hero section
+  const tubelightMatrix1 = createTubelightMatrix(200);
+  const tubelightMatrix2 = createTubelightMatrix(1000);
+  const tubelightMatrix3 = createTubelightMatrix(300);
+
+  const tubelightEffect1 = useTransform(
+    time,
+    tubelightMatrix1[0],
+    tubelightMatrix1[1]
+  );
+  const tubelightEffect2 = useTransform(
+    time,
+    tubelightMatrix2[0],
+    tubelightMatrix2[1]
+  );
+  const tubelightEffect3 = useTransform(
+    time,
+    tubelightMatrix3[0],
+    tubelightMatrix3[1]
+  );
+
+  const butThatsNotAllRef = useRef(null);
+  const { scrollYProgress: otherServicesScrollYProgress } = useScroll({
+    target: butThatsNotAllRef,
+    offset: ["start end", "end start"],
+  });
+  const opacityOnScrollEffect = useTransform(
+    otherServicesScrollYProgress,
+    [0, 0.45],
+    [0, 1]
+  );
+  const fadeUpOnScrollEffect = useTransform(
+    otherServicesScrollYProgress,
+    [0, 0.45],
+    [50, 0]
+  );
 
   const expandFAQ = (e) => {
     const faqItems = faqRef.current.querySelectorAll(".qna-container");
@@ -60,8 +105,16 @@ const Home = () => {
       >
         <h1 className="heading-1 max-w-2xl lg:max-w-4xl">
           Launch Your{" "}
-          <span className="text-heading-highlight dark:text-night-heading-highlight">
-            Dream Shopify Store
+          <span className="text-heading-highlight dark:text-night-heading-highlight drop-shadow-glow">
+            <motion.span style={{ opacity: tubelightEffect1 }}>
+              Dream
+            </motion.span>{" "}
+            <motion.span style={{ opacity: tubelightEffect2 }}>
+              Shopify
+            </motion.span>{" "}
+            <motion.span style={{ opacity: tubelightEffect3 }}>
+              Store
+            </motion.span>
           </span>{" "}
           in Less than 14 Days.
         </h1>
@@ -211,7 +264,14 @@ const Home = () => {
             </span>{" "}
             with your customers at every stage.
           </p>
-          <div className="flex flex-col space-y-2">
+          <motion.div
+            ref={butThatsNotAllRef}
+            style={{
+              opacity: opacityOnScrollEffect,
+              y: fadeUpOnScrollEffect,
+            }}
+            className="flex flex-col space-y-2"
+          >
             <div className="feature-card-container">
               <FeatureCard heading="Social Media Marketing">
                 Let's create a <i>buzzz</i> and connect with your audience on
@@ -231,7 +291,7 @@ const Home = () => {
                 sales.
               </FeatureCard>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -251,37 +311,43 @@ const Home = () => {
             excellence!
           </p>
           <div className="flex flex-col space-y-8 md:max-w-3xl 2xl:max-w-4xl">
-            <img
+            <motion.img
+              whileHover={{ scale: 1.01 }}
               src={Testimonials.MeenakshiRani}
               className="rounded-lg"
               alt="Testimonial of Meenakshi Rani from Meenac Garden"
               loading="lazy"
             />
-            <img
+            <motion.img
+              whileHover={{ scale: 1.01 }}
               src={Testimonials.TwirlAroundWorld}
               className="rounded-lg"
               alt="Testimonial of Annu Goyal from Twirl Around World"
               loading="lazy"
             />
-            <img
+            <motion.img
+              whileHover={{ scale: 1.01 }}
               src={Testimonials.TwirlAroundWorld2}
               className="rounded-lg"
               alt="Testimonial of Annu Goyal from Twirl Around World"
               loading="lazy"
             />
-            <img
+            <motion.img
+              whileHover={{ scale: 1.01 }}
               src={Testimonials.Effie}
               className="rounded-lg"
               alt="Testimonial of effie zhang from fonteva"
               loading="lazy"
             />
-            <img
+            <motion.img
+              whileHover={{ scale: 1.01 }}
               src={Testimonials.Ulas}
               className="rounded-lg"
               alt="Testimonial of Ulas Kutuk from fonteva"
               loading="lazy"
             />
-            <img
+            <motion.img
+              whileHover={{ scale: 1.01 }}
               src={Testimonials.George}
               className="rounded-lg"
               alt="Testimonial of George from LASE"

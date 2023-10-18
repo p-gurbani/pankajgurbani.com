@@ -4,6 +4,18 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      dropShadow: {
+        glow: [
+          "0 0px 20px rgba(27, 206, 165, 0.55)",
+          "0 0px 65px rgba(27, 206, 165, 0.4)",
+        ],
+      },
+      boxShadow: {
+        glow: [
+          "0 0px 20px rgba(27, 206, 165, 0.6)",
+          "0 0px 65px rgba(27, 206, 165, 0.4)",
+        ]
+      },
       colors: {
         gray: {
           100: "#F8F8F8",
