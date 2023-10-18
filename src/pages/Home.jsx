@@ -162,7 +162,7 @@ const Home = () => {
 
       {/* Project images */}
       <section className="flex flex-col items-center mt-20">
-        <Marquee speed={60} gradient={false}>
+        <Marquee speed={70} gradient={false}>
           <img
             src={MeenacGarden.Home}
             className="marquee-img"
@@ -410,31 +410,37 @@ const Home = () => {
       </section> */}
 
       <section className="section border-t-2 border-b-2 md:pt-4 md:pb-3 pt-3 pb-1">
-        <Marquee speed={60} gradient={false}>
-          <span className="marquee-text"><i>Shopify</i></span>
+        <Marquee speed={60} direction="right" gradient={false}>
+          <span className="marquee-text">Shopify</span>
           <span className="marquee-text">Ecommerce</span>
-          <span className="marquee-text"><i>Websites</i></span>
-          <span className="marquee-text">Social Media</span>
-          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Websites</span>
+          <span className="marquee-text">Social</span>
+          <span className="marquee-text">Media</span>
+          <span className="marquee-text">Shopify</span>
           <span className="marquee-text">Ecommerce</span>
-          <span className="marquee-text"><i>Websites</i></span>
-          <span className="marquee-text">Social Media</span>
-          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Websites</span>
+          <span className="marquee-text">Social</span>
+          <span className="marquee-text">Media</span>
+          <span className="marquee-text">Shopify</span>
           <span className="marquee-text">Ecommerce</span>
-          <span className="marquee-text"><i>Websites</i></span>
-          <span className="marquee-text">Social Media</span>
-          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Websites</span>
+          <span className="marquee-text">Social</span>
+          <span className="marquee-text">Media</span>
+          <span className="marquee-text">Shopify</span>
           <span className="marquee-text">Ecommerce</span>
-          <span className="marquee-text"><i>Websites</i></span>
-          <span className="marquee-text">Social Media</span>
-          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Websites</span>
+          <span className="marquee-text">Social</span>
+          <span className="marquee-text">Media</span>
+          <span className="marquee-text">Shopify</span>
           <span className="marquee-text">Ecommerce</span>
-          <span className="marquee-text"><i>Websites</i></span>
-          <span className="marquee-text">Social Media</span>
-          <span className="marquee-text"><i>Shopify</i></span>
+          <span className="marquee-text">Websites</span>
+          <span className="marquee-text">Social</span>
+          <span className="marquee-text">Media</span>
+          <span className="marquee-text">Shopify</span>
           <span className="marquee-text">Ecommerce</span>
-          <span className="marquee-text"><i>Websites</i></span>
-          <span className="marquee-text">Social Media</span>
+          <span className="marquee-text">Websites</span>
+          <span className="marquee-text">Social</span>
+          <span className="marquee-text">Media</span>
         </Marquee>
       </section>
 
